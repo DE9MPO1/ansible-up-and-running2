@@ -1,9 +1,16 @@
 Hands-on from the book 'Ansible: Up and Running'
 ================================================
 
-Repo built whilst reading tutorials in the book [Ansible: up and Running](http://shop.oreilly.com/product/0636920035626.do)
+Repo built whilst reading tutorials in the book [Ansible: up and Running](http://shop.oreilly.com/product/0636920035626.do), Lorin Hochstein, O'Reilly 2014.
 
-## Installation:
+Source code for the book: https://github.com/lorin/ansiblebook.git
+
+## Pre-requisities (Mac OS X):
+
+* Homebrew
+* Homebrew Cask
+
+## Installation (Mac OS X):
 
 * `brew install ansible`
 * `brew cask install virtualbox`
