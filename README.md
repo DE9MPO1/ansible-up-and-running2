@@ -1,7 +1,7 @@
 Hands-on from the book 'Ansible: Up and Running'
 ================================================
 
-Repo built whilst reading tutorials in the book [Ansible: up and Running](http://shop.oreilly.com/product/0636920035626.do), Lorin Hochstein, O'Reilly 2014.
+Repo built whilst reading tutorials in the book [Ansible: Up and Running](http://shop.oreilly.com/product/0636920035626.do), Lorin Hochstein, O'Reilly 2014.
 
 Source code for the book: https://github.com/lorin/ansiblebook.git
 
