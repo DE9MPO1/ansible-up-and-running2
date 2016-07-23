@@ -12,8 +12,25 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
 
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 443, host: 8443
+  # Use the same key for each machine (~/.vagrant.d/insecure_private_key)
+  #   - Vagrant 1.7+ defaults to using a different SSH key for each host
+  #   - The line below reverts to the earlier behavior of using the same SSH key for each host
+  config.ssh.insert_key = false
+
+  config.vm.define "vagrant1" do |vagrant1|
+    vagrant1.vm.network "forwarded_port", guest: 80, host: 8080
+    vagrant1.vm.network "forwarded_port", guest: 443, host: 8443
+  end
+
+  config.vm.define "vagrant2" do |vagrant2|
+    vagrant2.vm.network "forwarded_port", guest: 80, host: 8081
+    vagrant2.vm.network "forwarded_port", guest: 443, host: 8444
+  end
+
+  config.vm.define "vagrant3" do |vagrant3|
+    vagrant3.vm.network "forwarded_port", guest: 80, host: 8082
+    vagrant3.vm.network "forwarded_port", guest: 443, host: 8445
+  end
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
